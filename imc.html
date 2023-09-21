@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function click_calcular() {
+            let Peso = document.getElementById("txtPeso").value;
+            let Altura = document.getElementById("txtAltura").value;
+            if (Peso == "") {
+                alert("Informe o peso em quilos.");
+            } else if (Altura == "") {
+                alert("Informe a altura em metros.");
+            } else {
+                let imc = Number(Peso) / Number(Altura);
+                document.getElementById("txtimc").value = imc;
+                if (imc < 18.5)
+                document.getElementById("txtClas").value = "baixo peso";
+                if (24.99 > imc >= 18.5)
+                document.getElementById("txtClas").value = "normal";
+                if (25 < imc < 29.99)
+                document.getElementById("txtClas").value = "sobrepeso";
+                if (imc > 30)
+                document.getElementById("txtClas").value = "obesidade";
+            }
+        }
+
+        function click_limpar() {
+            document.getElementById("txtPeso").value = "";
+            document.getElementById("txtAltura").value = "";
+            document.getElementById("txtimc").value = "";
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <h1 id="tit">
+        Calculadora
+    </h1>
+
+    <form>
+        <div>
+            <label for="txtPeso">Peso</label>
+            <input type="number" name="" id="txtPeso" value="1">
+        </div>
+        <div>
+            <label for="txtAltura">Altura</label>
+            <input type="number" name="" id="txtAltura">
+        </div>
+        <div>
+            <label for="txtimc">IMC: </label>
+            <input type="number" name="" id="txtimc" disabled>
+        </div>
+        <div>
+            <label for="txtClas">Classificação: </label>
+            <input type="text" name="" id="txtClas" disabled>
+        </div>
+        <div>
+            <input type="button" value="Calcular" onclick="click_calcular();">
+
+            <input type="button" value="Limpar" onclick="click_limpar();">
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>
