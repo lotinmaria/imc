@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <div class="valor">
+            <label for="txtValorA">Numero 1</label>
+            <input type="number" name="ValorA" id="txtValorA">
+        </div>
+
+        <div class="valor">
+            <label for="txtValorA">Numero 2</label>
+            <input type="number" name="ValorB" id="txtValorB">
+        </div>
+
+        <div class="Soma">
+            <label for="calcular">Soma</label>
+            <input type="number" name="Soma" id="total" disabled>
+        </div>
+
+        <div class="valorInativo">
+            <input type="button" value="calcular" onclick="click_calcular()">
+            <input type="button" value="limpar" onclick="click_limpar()">
+        </div>
+    </form>
+
+</body>
+
+<script src="JS.js"></script>
+
+</html>
